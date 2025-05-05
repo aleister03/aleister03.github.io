@@ -54,6 +54,7 @@
       font-weight: bold;
     }
     nav a.active {
+      font-weight: 900;
       color: #3c5aa6;
     }
     nav a:hover {
@@ -87,7 +88,9 @@
   <script>
     function showError(event, section) {
       const currentHash = window.location.hash;
-      if ((section === 'home' && (currentHash === '' || currentHash === '#home'))) {
+      const isHome = (section === 'home') &&
+                    (currentHash === '' || currentHash === '#home' || window.location.pathname.endsWith('index.html'));
+      if (isHome) {
         return;
       }
       event.preventDefault();
