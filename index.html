@@ -6,6 +6,10 @@
   <title>Aorko Shikder</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background-color: #ccddff;
@@ -74,21 +78,38 @@
       font-size: 1.25rem;
     }
 
-    .contact-section {
+    #about, .contact-section {
       padding: 4rem 2rem;
       background-color: #ccddff;
+      color: #183a78;
       text-align: center;
-      margin-left: 3rem;
     }
 
-    .contact-section h2 {
+    #about h2, .contact-section h2 {
       font-size: 2rem;
       margin-bottom: 1.5rem;
     }
 
-    .contact-section p {
+    #about p, .contact-section p {
       font-size: 1.1rem;
-      margin-bottom: 2rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .resume-button {
+      background-color: #183a78;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .resume-button:hover {
+      background-color: #112b59;
     }
 
     .contact-section .contact-button {
@@ -119,7 +140,7 @@
 
   <div class="navbar" id="navbar">
     <a href="#home">Home</a>
-    <a href="#" onclick="showUnavailableMessage('About')">About</a>
+    <a href="#about">About</a>
     <a href="#" onclick="showUnavailableMessage('Works')">Works</a>
     <a href="#contact">Contact</a>
   </div>  
@@ -136,15 +157,68 @@
     <h1>Aorko Shikder</h1>
     <p>Computer Science Student | Cyber Security Enthusiast | Learner</p>
   </div>
-  <div class="contact-section" id="contact">
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I’m <strong>Aorko Shikder</strong>, a Computer Science student at BRAC University in Bangladesh. Raised in Uttara, I completed my Secondary and Higher Secondary education at Uttara High School & College.
+      <br><br>
+      I consider myself a dedicated and hardworking individual with a deep passion for football — a lifelong fan of <strong>Lionel Messi</strong> and <strong>FC Barcelona</strong>. Beyond sports, I’m equally enthusiastic about technology. I enjoy solving problems, writing code, and keeping up with the rapidly evolving tech landscape.
+      <br><br>
+      My primary academic and career focus is in <strong>Cybersecurity</strong>, a field I’m passionate about and aim to build a future in. I constantly seek opportunities to grow through online courses, personal projects, and collaboration with like-minded peers.
+    </p>
+    <a href="/resume.pdf" class="resume-button" target="_blank">Resume</a>
+  </section>
+
+  <section class="contact-section" id="contact">
     <h2>Contact Me</h2>
     <p>If you want to contact me, you can reach me directly through my social media. I am always open to queries. Or you can mail me from here.</p>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aorko3021@gmail.com" class="contact-button" target="_blank">Send Mail</a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aorko3021@gmail.com" class="contact-button" target="_blank">Mail</a>
+</section>
 
-  </div>
+<style>
+    .contact-section {
+      padding: 8rem 2rem;
+      background-color: #ccddff;
+      color: #183a78;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem; /* Increased gap for more space between elements */
+    }
+
+    .contact-section h2 {
+      font-size: 2.2rem; /* Slightly larger title */
+      margin-bottom: 2rem; /* Increased margin to separate it from the paragraph */
+    }
+
+    .contact-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 900px; /* Increased max-width for a wider paragraph */
+      margin: 0 auto 3rem; /* Added more margin at the bottom */
+    }
+
+    .contact-button {
+      background-color: #183a78;
+      color: white;
+      border: none;
+      padding: 1rem 2rem; /* Increased button padding for a larger button */
+      font-size: 1.2rem; /* Slightly larger text for the button */
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .contact-button:hover {
+      background-color: #112b59;
+    }
+</style>
 
   <footer>
-    © 2025 Aorko Shikder — Made by Aorko
+    © 2025 Aorko Shikder
   </footer>
 
   <script>
