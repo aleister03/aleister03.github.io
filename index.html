@@ -146,13 +146,17 @@
       font-size: 0.9rem;
     }
 
+    /* MOBILE STYLES */
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
         padding: 1rem;
         gap: 1rem;
-        position: static;
-        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ccddff;
+        width: 100%;
         display: none;
       }
 
@@ -162,6 +166,10 @@
 
       .hamburger {
         display: flex;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1001;
       }
 
       .socials {
@@ -173,33 +181,46 @@
         gap: 1.5rem;
         padding: 1rem 0;
         background-color: #ccddff;
-        font-size: 1.2rem;
-      }
-
-      .socials a {
-        color: #183a78;
+        font-size: 1.4rem;
+        z-index: 999;
       }
 
       .center-content {
-        padding: 8rem 1rem 2rem;
+        padding: 7rem 1rem 2rem;
         height: auto;
       }
 
       .center-content h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
 
       .center-content p {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
 
       #about, .contact-section {
         padding: 3rem 1rem;
       }
 
+      #about h2, .contact-section h2 {
+        font-size: 1.5rem;
+      }
+
+      #about p, .contact-section p {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
       .contact-button, .resume-button {
         width: 80%;
         max-width: 300px;
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+      }
+
+      footer {
+        font-size: 0.85rem;
+        padding-bottom: 2.5rem;
       }
     }
   </style>
