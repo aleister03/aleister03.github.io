@@ -42,6 +42,20 @@
       text-decoration: underline;
     }
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #183a78;
+      border-radius: 5px;
+    }
+
     .socials {
       position: fixed;
       top: 40%;
@@ -136,6 +150,15 @@
         gap: 1rem;
         position: static;
         align-items: center;
+        display: none;
+      }
+
+      .navbar.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
       }
 
       .socials {
@@ -177,6 +200,12 @@
     <a href="#" onclick="alert('Works section is currently unavailable.')">Works</a>
     <a href="#contact">Contact</a>
   </div>  
+
+  <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
   <div class="socials">
     <a href="https://facebook.com/aorko.shikder" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -225,6 +254,13 @@
         navbar.style.top = "0";
       }
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const navbarMenu = document.getElementById('navbar');
+
+    hamburger.addEventListener('click', () => {
+      navbarMenu.classList.toggle('active');
     });
   </script>
 
