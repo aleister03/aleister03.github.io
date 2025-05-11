@@ -18,6 +18,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      font-size: 1.1rem;
     }
 
     .navbar {
@@ -75,7 +76,7 @@
     }
 
     .center-content p {
-      font-size: 1.25rem;
+      font-size: inherit;
     }
 
     #about, .contact-section {
@@ -91,7 +92,7 @@
     }
 
     #about p, .contact-section p {
-      font-size: 1.1rem;
+      font-size: inherit;
       line-height: 1.8;
       max-width: 800px;
       margin: 0 auto 2rem;
@@ -134,6 +135,73 @@
       color: #183a78;
       font-size: 0.9rem;
     }
+
+    .contact-section {
+      padding: 8rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .contact-section h2 {
+      font-size: 2.2rem;
+    }
+
+    .contact-button {
+      background-color: #183a78;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .contact-button:hover {
+      background-color: #112b59;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+        position: static;
+        align-items: center;
+      }
+
+      .socials {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1rem 0;
+      }
+
+      .center-content {
+        padding: 8rem 1rem 2rem;
+        height: auto;
+      }
+
+      .center-content h1 {
+        font-size: 1.8rem;
+      }
+
+      .center-content p {
+        font-size: inherit;
+      }
+
+      #about, .contact-section {
+        padding: 3rem 1rem;
+      }
+
+      .contact-button, .resume-button {
+        width: 80%;
+        max-width: 300px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -174,87 +242,7 @@
     <h2>Contact Me</h2>
     <p>If you want to contact me, you can reach me directly through my social media. I am always open to queries. Or you can mail me from here.</p>
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aorko3021@gmail.com" class="contact-button" target="_blank">Mail</a>
-</section>
-
-<style>
-    .contact-section {
-      padding: 8rem 2rem;
-      background-color: #ccddff;
-      color: #183a78;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .contact-section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
-    }
-
-    .contact-section p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      max-width: 900px;
-      margin: 0 auto 3rem;
-    }
-
-    .contact-button {
-      background-color: #183a78;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      cursor: pointer;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-
-    .contact-button:hover {
-      background-color: #112b59;
-    }
-    @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    position: static;
-    align-items: center;
-  }
-
-  .socials {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin: 1rem 0;
-  }
-
-  .center-content {
-    padding: 8rem 1rem 2rem;
-    height: auto;
-  }
-
-  .center-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .center-content p {
-    font-size: 1rem;
-  }
-
-  #about, .contact-section {
-    padding: 3rem 1rem;
-  }
-
-  .contact-button, .resume-button {
-    width: 80%;
-    max-width: 300px;
-  }
-}
-
-</style>
+  </section>
 
   <footer>
     © 2025 Aorko Shikder
