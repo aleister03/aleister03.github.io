@@ -215,6 +215,45 @@
     .contact-button:hover {
       background-color: #112b59;
     }
+    @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    position: static;
+    align-items: center;
+  }
+
+  .socials {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .center-content {
+    padding: 8rem 1rem 2rem;
+    height: auto;
+  }
+
+  .center-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .center-content p {
+    font-size: 1rem;
+  }
+
+  #about, .contact-section {
+    padding: 3rem 1rem;
+  }
+
+  .contact-button, .resume-button {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
 </style>
 
   <footer>
