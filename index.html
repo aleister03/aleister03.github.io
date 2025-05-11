@@ -58,12 +58,15 @@
 
     .socials {
       position: fixed;
-      top: 40%;
-      left: 1rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       gap: 1.5rem;
       font-size: 1.5rem;
+      padding: 1rem 0;
+      background-color: #ccddff;
       z-index: 999;
     }
 
@@ -162,10 +165,19 @@
       }
 
       .socials {
-        position: static;
-        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
         justify-content: center;
-        margin: 1rem 0;
+        gap: 1.5rem;
+        padding: 1rem 0;
+        background-color: #ccddff;
+        font-size: 1.2rem;
+      }
+
+      .socials a {
+        color: #183a78;
       }
 
       .center-content {
